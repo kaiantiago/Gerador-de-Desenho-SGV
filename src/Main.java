@@ -16,15 +16,16 @@ public class Main {
 
         ArrayList<String> novaPalavra = new ArrayList();
 
-        int i = 3;
+        int i = 4;
 
         for (int j = 0; j < i; j++) {
             for (String letter : palavra) {
                 switch (palavra.get(palavra.indexOf(letter))) {
-                    case "N" -> novaPalavra.add("NX");
-                    case "X" -> novaPalavra.add("TL");
-                    case "L" -> novaPalavra.add("SX");
-                    case "S" -> novaPalavra.add("LN");
+                    case "N" -> novaPalavra.add("NLX"); // N - direita
+                    case "X" -> novaPalavra.add("tL"); // X - baixo
+                    case "L" -> novaPalavra.add("SN"); // L - esquerda
+                    case "S" -> novaPalavra.add("LLN"); // S - cima
+                    case "t" ->novaPalavra.add(""); // t - movimento vazio
                     default -> novaPalavra.add(letter);
                 }
             }
